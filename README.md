@@ -83,13 +83,6 @@ aws-rag-chatbot/
 No Google API key? No problem!
 ✅ HuggingFace code is already there, just uncomment it in ingest.py & app.py and follow the process listed above
 
-### **1. Google Gemini (Premium)**
-```bash
-export GOOGLE_API_KEY="your_key"
-python ingest.py
-streamlit run app.py
-
-
 ### **Supported Models**
 | Embeddings | LLM |
 |------------|-----|
