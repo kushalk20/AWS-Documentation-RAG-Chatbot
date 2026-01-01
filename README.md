@@ -4,7 +4,6 @@
 [![Streamlit](https://img.shields.io/badge/Streamlit-FF6B35?style=for-the-badge&logo=streamlit&logoColor=white)](https://streamlit.io)
 [![LangChain](https://img.shields.io/badge/LangChain-007BFF?style=for-the-badge&logo=langchain&logoColor=white)](https://langchain.com)
 [![Google Gemini](https://img.shields.io/badge/Google%20Gemini-4285F4?style=for-the-badge&logo=google&logoColor=white)](https://ai.google.dev)
-[![License](https://img.shields.io/badge/License-MIT-green.svg?style=for-the-badge)](LICENSE)
 
 A **production-ready Retrieval-Augmented Generation (RAG)** chatbot for **AWS documentation**. Ask questions about EC2, IAM, S3, Lambda, Nitro Enclaves & more!
 
