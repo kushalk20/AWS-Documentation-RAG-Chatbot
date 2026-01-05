@@ -99,7 +99,7 @@ def load_rag_pipeline():
     vectorstore = FAISS.load_local(
         VECTORSTORE_DIR, embeddings, allow_dangerous_deserialization=True
     )
-    retriever = vectorstore.as_retriever(search_kwargs={"k": 3})
+    retriever = vectorstore.as_retriever(search_kwargs={"k": 5})
 
     # Downloading HuggingFace LLM to LOCAL - No API needed!
     # print("🔄 Loading local model...")
@@ -123,8 +123,8 @@ def load_rag_pipeline():
     llm = ChatGoogleGenerativeAI(api_key=os.environ.get("GOOGLE_API_KEY"),model="gemini-2.5-flash",temperature=0.5)
     
     def format_docs(docs):
-        context = "\n\n".join([doc.page_content[:400] for doc in docs])
-        return context[:1500]
+        context = "\n\n".join([doc.page_content for doc in docs])
+        return context
     
     qa_prompt = ChatPromptTemplate.from_template("""
     You are an AWS documentation expert.
@@ -141,7 +141,7 @@ def load_rag_pipeline():
 
     QUESTION: {input}
 
-    Provide a concise, synthesized AWS answer:
+    Provide a concise and factual answer:
 
     ANSWER:""")
     
